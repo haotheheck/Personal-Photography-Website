@@ -1,0 +1,335 @@
+/* The side navigation menu */
+
+
+.sidebar {
+margin: 0;
+padding: 0;
+width: 250px;
+align-content: center;
+background-color: white;
+position: fixed;
+height: 100%;
+overflow: auto;
+letter-spacing: 8px;
+text-align: center;
+font-family: mondana;
+object-fit: cover;
+	
+}
+
+
+/* Sidebar links */
+.sidebar a {
+display: flex;
+color: black;
+padding: 30px;
+}
+
+h1 , h2 , h3 {
+	font-family:Arial;
+	color: black;
+}
+
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+ 
+  color: deeppink;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 250px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+div.content1 {
+  margin-left:250px;
+margin-bottom: 600px;
+  padding: 100px 310px;
+  height: 700px;
+}
+
+div.content2 {
+	margin-left:   50px;
+	margin-bottom: 0px;
+	padding: 100px 310px;
+	height: 700px;
+}
+
+div.content6 {
+	margin-left:  100px;
+	margin-bottom: 80px;
+	padding: 100px 310px;
+	height: 700px;
+}
+
+div.content3 {
+	margin-left:   200px;
+	margin-bottom: 900px;
+	padding: 100px 310px;
+	height: 700px;
+}
+
+div.content4 {
+	margin-left:   130px;
+	margin-bottom: 50px;
+	padding: 100px 310px;
+	height: 300px;
+}
+.content1 img{
+	height: 70%;
+	width: auto;
+}
+
+div.content2 img {
+	
+
+	height: 600px;
+}
+
+div.content3 img {
+	
+
+	height: 500px;
+}
+
+div.content4 img {
+	
+
+	height: 400px;
+}
+
+div.content6 img {
+	
+
+	height: 900px;
+}
+
+
+.slideshow{
+	width: 40%;
+	height: 900px;
+	position: absolute;
+	left: 55%;
+	top: 60%;
+	display: block;
+	transform: translate(-50%, -50%);
+	background-image: url("images/image4.jpg");
+	background-size: 100% 100%;
+	animation: slider 20s infinite linear;
+}
+
+
+p{
+	font-family: Helvetica, Arial, sans-serif;
+	color:#6E6D6D;
+}
+
+.contact{
+	max-width: 600px;
+	margin: 20px;
+	padding: 20px 10px;
+	overflow: hidden;
+	
+}
+
+.contact-text{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 50px 0;
+	border: 20;
+	background:#9E9B9B;
+	padding: 20px 40px;
+	outline: none;
+	color: aliceblue;
+	transition: 0.5;
+	
+}
+
+.contact-form-text:focus{
+	box-shadow: 0 0 10px 4px #1000;
+}
+
+textarea.contact-text{
+	resize: none;
+	height: 120px;
+	
+}
+
+.contact-btn{
+	float: right;
+	border: 0;
+	background: deeppink;
+	color:aliceblue;
+	padding: 12px 50px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.5;
+}
+
+.contact-btn:hover{
+	background: #9C145E;
+}
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+	.content .gallery{
+	position: relative;
+	height: auto;
+	width: 90%;
+	margin: auto;
+	padding: 45px 0;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto auto;
+	grid-gap: 2vh;
+	grid-auto-flow: dense;
+	
+	
+}
+.content .gallery .image-gallery{
+	position:  relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0px 2px 2px rgba(0,0,0, 0.9);
+	
+}
+
+.content .gallery .image-gallery img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	filter: brightness(0.5) grayscale(100);
+	transition: 0.3s ease-in-out;
+}
+
+.content .gallery .image-gallery:hover img{
+	
+	filter: brightness(1) grayscale(0);
+}
+
+
+
+.content .gallery .image-gallery:first-child{
+	grid-column-start: span 2;
+	grid-row-start: span 2;
+	
+}
+.content .gallery .image-gallery:nth-child(2n+3){
+	grid-row-start: span 2;
+	
+}
+.content .gallery .image-gallery:nth-child(4n+5){
+	grid-column-start: span 2;
+	grid-row-start: span 2;
+}
+
+.content .gallery .image-gallery:nth-child(6n+7){
+	grid-row-start: span 1;
+	
+}
+.content .gallery .image-gallery:nth-child(8n+9){
+	grid-column-start: span 1;
+	grid-row-start: span 1;
+	
+}
+
+@keyframes slider{ 
+	0%{
+		background-image: url("images/image4.jpg");
+	}
+	
+	35%{
+		background-image: url("images/image6.jpg");
+	}
+	
+	74%{
+		background-image: url("images/image7.jpg");
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: center;}
+  div.content {margin-left: 0;}
+	
+	div.content1 {
+  margin-left:0px;
+  padding: 20px 20px;
+  height: 500px;
+}
+.content1 img{
+		width: 100%;
+		height: 100%;
+	}
+	
+	.slideshow{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: -5%;
+		
+			
+			
+			
+	}	
+
+}
+.content .gallery{
+	display: grid;
+	grid-template-columns: auto auto auto ;
+}
+
+
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 425px) {
+  .sidebar a {
+    float: none;
+	display: flex;
+  }
+.content .gallery {
+		display: block;
+	}
+	
+.content .gallery .image-gallery {
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 2% 0;
+	}
+	
+.content .gallery .image-gallery img {
+		display: block;
+	}
+	
+		div.content1 {
+	  margin-left:0px;
+	  padding: 20px 20px;
+	  height: 500px;
+	}
+
+		.content1 img{
+		width: 100%;
+		height: 100%;
+	}
+	
+		.sideshow{
+		width: 100%;
+		height: 100%;
+	}
+}
+
